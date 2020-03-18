@@ -163,8 +163,8 @@ End Code
   @code
     Dim BASE_URL = "http://loadshedding.eskom.co.za/LoadShedding/"
     If Suburb <> "" And Suburb <> "0" Then
-      LoadsheddingStage = 4 'Overwrite Default Loadshedding Stage
-
+      'LoadsheddingStage = 4 'Overwrite Default Loadshedding Stage
+      LoadsheddingStage = (LoadsheddingStage - 1)
       'Dim s As String = BASE_URL & "/GetScheduleM/" & Suburb & "/" & (LoadsheddingStage - 1) & "/_/12"
       '@("http://loadshedding.eskom.co.za/LoadShedding/GetScheduleM/" & Suburb & "/" & (LoadsheddingStage - 1) & "/_/12")
       'Dim d = SePush.SendRequest("GetScheduleM/" & Suburb & "/" & (LoadsheddingStage - 1) & "/_/12", Nothing, "application/json", WebRequestMethods.Http.Get)
