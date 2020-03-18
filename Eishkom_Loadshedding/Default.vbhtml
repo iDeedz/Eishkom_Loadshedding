@@ -31,8 +31,8 @@ End Code
 
 <form method="post" name="ls">
   <div class="form-group">
-    <label for="status">Status:</label>
     <h3>
+      Status: 
       <i class="fa fa-power-off @Html.Raw(IIf(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage) > 0, "text-danger", "text-success"))" aria-hidden="true"></i>
       @SePush.GetStatusText(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage))
       <input type="hidden" name="status" value="@LoadsheddingStage" />
