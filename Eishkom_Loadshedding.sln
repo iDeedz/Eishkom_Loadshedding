@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Eishkom_Loadshedding", "Eishkom_Loadshedding\", "{3D0AE2C8-2AA0-40B8-81F2-CD8B9F21C3AA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54466"
+		Debug.AspNetCompiler.PhysicalPath = "Eishkom_Loadshedding\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54466\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54466"
+		Release.AspNetCompiler.PhysicalPath = "Eishkom_Loadshedding\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54466\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54466"
+		SlnRelativePath = "Eishkom_Loadshedding\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D0AE2C8-2AA0-40B8-81F2-CD8B9F21C3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0AE2C8-2AA0-40B8-81F2-CD8B9F21C3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05FA04D1-8929-449D-9D39-27ABBFBF706F}
+	EndGlobalSection
+EndGlobal
