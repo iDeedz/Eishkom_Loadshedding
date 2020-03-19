@@ -32,7 +32,7 @@ End Code
 <form method="post" name="ls">
   <div class="form-group">
     <h3>
-      Status: 
+      Status:
       <i class="fa fa-power-off @Html.Raw(IIf(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage) > 0, "text-danger", "text-success"))" aria-hidden="true"></i>
       @SePush.GetStatusText(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage))
       <input type="hidden" name="status" value="@LoadsheddingStage" />
@@ -159,7 +159,6 @@ End Code
       End If
     End Code
   </div>
-  @*<code>@Suburb</code>*@
   @code
     Dim BASE_URL = "http://loadshedding.eskom.co.za/LoadShedding/"
     If Suburb <> "" And Suburb <> "0" Then
@@ -177,7 +176,7 @@ End Code
         If d.Success = True Then
           If d.Objects.Count > 0 Then
             For Each dt In d.Objects
-            @Html.Raw("<h3>" & CDate(dt.Day).Day & "</h3>")
+              @Html.Raw("<h3>Day of month: " & CDate(dt.Day).Day & "</h3>")
               For Each shed In dt.Schedule
 
                 Dim count = 0
@@ -189,17 +188,17 @@ End Code
                 End If
 
                 If shed.Sched_No = -1 Then
-                @Html.Raw("<p>No Loadshedding</p><br>")
+                  @Html.Raw("<p>No Loadshedding</p><br>")
                 Else
-                @Html.Raw("<p>" & shed.Sched_No & " - Start: " & shed.StartTime & " | End: " & shed.EndTime & "</p><br>")
+                  @Html.Raw("<p>" & shed.Sched_No & " - Start: " & shed.StartTime & " | End: " & shed.EndTime & "</p><br>")
                 End If
 
               Next
-            @Html.Raw("<hr>")
+              @Html.Raw("<hr>")
             Next
           End If
         Else
-        @Html.Raw(d.ErrorMessage)
+          @Html.Raw(d.ErrorMessage)
         End If
       End If
     End If
