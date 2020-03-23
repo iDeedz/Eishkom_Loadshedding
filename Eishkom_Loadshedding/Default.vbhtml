@@ -21,7 +21,7 @@
   Dim LoadsheddingStage = -1
 
   Try
-    LoadsheddingStage = SePush.GetStatus
+    LoadsheddingStage = EskomSePush.GetStatus
   Catch ex As Exception
     LoadsheddingStage = -1
   End Try
@@ -34,7 +34,7 @@ End Code
     <h3>
       Status:
       <i class="fa fa-power-off @Html.Raw(IIf(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage) > 0, "text-danger", "text-success"))" aria-hidden="true"></i>
-      @SePush.GetStatusText(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage))
+      @EskomSePush.GetStatusText(IIf(LoadsheddingStage > -1, LoadsheddingStage - 1, LoadsheddingStage))
       <input type="hidden" name="status" value="@LoadsheddingStage" />
     </h3>
   </div>
@@ -89,7 +89,7 @@ End Code
     <label for="municipality">Municipalities</label>
     @code
       If ProvinceReq <> "" Then
-        Dim Municipalities = SePush.GetMunicipalities(ProvinceReq)
+        Dim Municipalities = EskomSePush.GetMunicipalities(ProvinceReq)
         @*@Json.Encode(Municipalities)*@
     End Code
     <select class="form-control" onchange="ls.submit()" name="municipality">
@@ -121,7 +121,7 @@ End Code
     @*<code>@Municipality</code>*@
     @code
       If Municipality <> "" Then
-        Dim suburbsData = SePush.GetSurburbData("", Municipality)
+        Dim suburbsData = EskomSePush.GetSurburbData("", Municipality)
     End Code
     <br />
     <select class="form-control" onchange="ls.submit()" name="suburb">
@@ -171,7 +171,7 @@ End Code
       If LoadsheddingStage > 0 Then
 
 
-        Dim d = SePush.GetSchedules(Suburb, LoadsheddingStage)
+        Dim d = EskomSePush.GetSchedules(Suburb, LoadsheddingStage)
         '@Json.Encode(d)
         If d.Success = True Then
           If d.Objects.Count > 0 Then
